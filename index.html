@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="google-adsense-account" content="ca-pub-6881877137346501">
+
+<title>FreeMovieMania</title>
+<!-- CSS Links -->
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/responsive.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+//	window.addEventListener("resize", function() {
+//		"use strict"; window.location.reload(); 
+//	});
+
+
+	document.addEventListener("DOMContentLoaded", function(){
+        
+
+    	/////// Prevent closing from click inside dropdown
+		document.querySelectorAll('.dropdown-menu').forEach(function(element){
+			element.addEventListener('click', function (e) {
+			  e.stopPropagation();
+			});
+		})
+
+
+
+		// make it as accordion for smaller screens
+		if (window.innerWidth < 992) {
+
+			// close all inner dropdowns when parent is closed
+			document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+				everydropdown.addEventListener('hidden.bs.dropdown', function () {
+					// after dropdown is hidden, then find all submenus
+					  this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+					  	// hide every submenu as well
+					  	everysubmenu.style.display = 'none';
+					  });
+				})
+			});
+			
+			document.querySelectorAll('.dropdown-menu a').forEach(function(element){
+				element.addEventListener('click', function (e) {
+		
+				  	let nextEl = this.nextElementSibling;
+				  	if(nextEl && nextEl.classList.contains('submenu')) {	
+				  		// prevent opening link if link needs to open dropdown
+				  		e.preventDefault();
+				  		console.log(nextEl);
+				  		if(nextEl.style.display == 'block'){
+				  			nextEl.style.display = 'none';
+				  		} else {
+				  			nextEl.style.display = 'block';
+				  		}
+
+				  	}
+				});
+			})
+		}
+		// end if innerWidth
+
+	}); 
+	// DOMContentLoaded  end
+</script>
+
+</head>
+<body>
+
+<div class="container-fluid p-0">
+
+<!-- ============= Navbar ============== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+ <div class="container-fluid">
+ 	 <a class="navbar-brand" href="#">
+    <img id="mainLogo" src="./assets/img/Freemoviemania logo.png" alt="FreeMovieMania">
+   </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+	
+
+	<ul class="navbar-nav">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Categories  </a>
+		    <ul class="dropdown-menu">
+			  
+			  <li><a class="dropdown-item" href="#"> Hollywood &raquo; </a>
+			  	 <ul class="submenu dropdown-menu">
+				    <li><a class="dropdown-item" href="#">Action</a></li>
+				    <li><a class="dropdown-item" href="#">Comedy</a></li>
+				    <li><a class="dropdown-item" href="#">Horror</a></li>
+				    <li><a class="dropdown-item" href="#">Drama</a></li>
+				    <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+				    <li><a class="dropdown-item" href="#">Thriller</a></li>
+            <li><a class="dropdown-item" href="#">Adventure</a></li>
+				 </ul>
+			  </li>
+        <li><a class="dropdown-item" href="#"> Bollywood &raquo; </a>
+          <ul class="submenu dropdown-menu">
+           <li><a class="dropdown-item" href="#">Action</a></li>
+           <li><a class="dropdown-item" href="#">Comedy</a></li>
+           <li><a class="dropdown-item" href="#">Horror</a></li>
+           <li><a class="dropdown-item" href="#">Drama</a></li>
+           <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+           <li><a class="dropdown-item" href="#">Thriller</a></li>
+           <li><a class="dropdown-item" href="#">Adventure</a></li>
+        </ul>
+       </li>
+       <li><a class="dropdown-item" href="#"> Korean &raquo; </a>
+        <ul class="submenu dropdown-menu">
+         <li><a class="dropdown-item" href="#">Action</a></li>
+         <li><a class="dropdown-item" href="#">Comedy</a></li>
+         <li><a class="dropdown-item" href="#">Horror</a></li>
+         <li><a class="dropdown-item" href="#">Drama</a></li>
+         <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+         <li><a class="dropdown-item" href="#">Thriller</a></li>
+         <li><a class="dropdown-item" href="#">Adventure</a></li>
+      </ul>
+     </li>
+     <li><a class="dropdown-item" href="#"> Animation &raquo; </a>
+      <ul class="submenu dropdown-menu">
+       <li><a class="dropdown-item" href="#">Action</a></li>
+       <li><a class="dropdown-item" href="#">Comedy</a></li>
+       <li><a class="dropdown-item" href="#">Horror</a></li>
+       <li><a class="dropdown-item" href="#">Drama</a></li>
+       <li><a class="dropdown-item" href="#">Science Fiction</a></li>
+       <li><a class="dropdown-item" href="#">Thriller</a></li>
+       <li><a class="dropdown-item" href="#">Adventure</a></li>
+    </ul>
+   </li>
+   <li><a class="dropdown-item" href="#"> Bangla Movies &raquo; </a>
+    <ul class="submenu dropdown-menu">
+     <li><a class="dropdown-item" href="#">Bangladesh</a></li>
+     <li><a class="dropdown-item" href="#">Kolkata</a></li>
+  </ul>
+ </li>
+     
+			  
+			  
+			  <li><a class="dropdown-item" href="#"> Hindi Dubbed </a></li>
+			  <li><a class="dropdown-item" href="#"> Bangla Dubbed </a></li>
+		    </ul>
+		</li>
+    <li class="nav-item"><a class="nav-link" href="#"> Games </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"> Softwares </a></li>
+    <li class="nav-item"><a class="nav-link" href="#"> Contact Us </a></li>
+	</ul>
+  <form class="d-flex" id="navSearchBar">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  </div> <!-- navbar-collapse.// -->
+ </div> <!-- container-fluid.// -->
+</nav>
+<!-- ============= Navbar END// ============== -->
+
+</div><!-- container //  -->
+
+</body>
+</html>
