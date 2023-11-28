@@ -9,65 +9,12 @@
 <!-- CSS Links -->
 <link rel="stylesheet" href="./assets/css/style.css">
 <link rel="stylesheet" href="./assets/css/responsive.css">
+<link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 
 
-<script type="text/javascript">
-//	window.addEventListener("resize", function() {
-//		"use strict"; window.location.reload(); 
-//	});
-
-
-	document.addEventListener("DOMContentLoaded", function(){
-        
-
-    	/////// Prevent closing from click inside dropdown
-		document.querySelectorAll('.dropdown-menu').forEach(function(element){
-			element.addEventListener('click', function (e) {
-			  e.stopPropagation();
-			});
-		})
-
-
-
-		// make it as accordion for smaller screens
-		if (window.innerWidth < 992) {
-
-			// close all inner dropdowns when parent is closed
-			document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-				everydropdown.addEventListener('hidden.bs.dropdown', function () {
-					// after dropdown is hidden, then find all submenus
-					  this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-					  	// hide every submenu as well
-					  	everysubmenu.style.display = 'none';
-					  });
-				})
-			});
-			
-			document.querySelectorAll('.dropdown-menu a').forEach(function(element){
-				element.addEventListener('click', function (e) {
-		
-				  	let nextEl = this.nextElementSibling;
-				  	if(nextEl && nextEl.classList.contains('submenu')) {	
-				  		// prevent opening link if link needs to open dropdown
-				  		e.preventDefault();
-				  		console.log(nextEl);
-				  		if(nextEl.style.display == 'block'){
-				  			nextEl.style.display = 'none';
-				  		} else {
-				  			nextEl.style.display = 'block';
-				  		}
-
-				  	}
-				});
-			})
-		}
-		// end if innerWidth
-
-	}); 
-	// DOMContentLoaded  end
-</script>
 
 </head>
 <body>
@@ -90,7 +37,7 @@
 		<li class="nav-item dropdown">
 			<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">  Categories  </a>
 		    <ul class="dropdown-menu">
-			  
+			  <!-- Hollywood Button  -->
 			  <li><a class="dropdown-item" href="#"> Hollywood &raquo; </a>
 			  	 <ul class="submenu dropdown-menu">
 				    <li><a class="dropdown-item" href="#">Action</a></li>
@@ -102,6 +49,7 @@
             <li><a class="dropdown-item" href="#">Adventure</a></li>
 				 </ul>
 			  </li>
+        <!-- Bollywood Button -->
         <li><a class="dropdown-item" href="#"> Bollywood &raquo; </a>
           <ul class="submenu dropdown-menu">
            <li><a class="dropdown-item" href="#">Action</a></li>
@@ -113,6 +61,7 @@
            <li><a class="dropdown-item" href="#">Adventure</a></li>
         </ul>
        </li>
+       <!-- Korean Button  -->
        <li><a class="dropdown-item" href="#"> Korean &raquo; </a>
         <ul class="submenu dropdown-menu">
          <li><a class="dropdown-item" href="#">Action</a></li>
@@ -124,6 +73,7 @@
          <li><a class="dropdown-item" href="#">Adventure</a></li>
       </ul>
      </li>
+
      <li><a class="dropdown-item" href="#"> Animation &raquo; </a>
       <ul class="submenu dropdown-menu">
        <li><a class="dropdown-item" href="#">Action</a></li>
@@ -163,5 +113,131 @@
 
 </div><!-- container //  -->
 
+<!-- ============ Banner Section =========== -->
+<section class="container-fluid p-0">
+  <div id="carouselExampleFade" class="carousel slide carousel-slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/philly-movies-hero-banner (1).jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+<!-- Hollywood Movie Section  -->
+<section class="container bollywoodMovies mt-md-5 text-center">
+  <h2>Bollywood Movies</h2>
+  <br>
+  <div class="owl-carousel owl-theme">
+    <div class="item">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">12th Fail</h5>
+          <p class="card-text">IMDb  Rating: 9.2/10</p>
+          <a href="#" class="btn btn-primary">Download Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">12th Fail</h5>
+          <p class="card-text">IMDb  Rating: 9.2/10</p>
+          <a href="#" class="btn btn-primary">Download Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">12th Fail</h5>
+          <p class="card-text">IMDb  Rating: 9.2/10</p>
+          <a href="#" class="btn btn-primary">Download Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">12th Fail</h5>
+          <p class="card-text">IMDb  Rating: 9.2/10</p>
+          <a href="#" class="btn btn-primary">Download Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">12th Fail</h5>
+          <p class="card-text">IMDb  Rating: 9.2/10</p>
+          <a href="#" class="btn btn-primary">Download Page</a>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">12th Fail</h5>
+          <p class="card-text">IMDb  Rating: 9.2/10</p>
+          <a href="#" class="btn btn-primary">Download Page</a>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+
+<!-- Bollywood Movie Section  -->
+<section class="container HollywoodMovies">
+  <h2>Hollywood Movies</h2>
+  <br>
+</section>
+
+
+<!-- Script Links  -->
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/navbar.js"></script>
+
+<script>
+$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    autoplay: true,
+    loop:true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:5,
+            nav:true,
+            loop:false
+        }
+    }
+})
+  
+</script>
 </body>
 </html>

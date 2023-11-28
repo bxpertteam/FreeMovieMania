@@ -26,6 +26,11 @@
 .dropdown-menu .dropdown-menu{
 		margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
 }
+#carouselExampleFade img {
+    height: 230px;
+}
 
 }	
 /* ============ small devices .end// ============ */
+
+/* Owl slider  */
