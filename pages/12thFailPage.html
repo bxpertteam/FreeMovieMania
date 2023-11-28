@@ -7,10 +7,10 @@
 
 <title>FreeMovieMania</title>
 <!-- CSS Links -->
-<link rel="stylesheet" href="./assets/css/style.css">
-<link rel="stylesheet" href="./assets/css/responsive.css">
-<link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
-<link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
 
@@ -25,7 +25,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
  <div class="container-fluid">
  	 <a class="navbar-brand" href="#">
-    <img id="mainLogo" src="./assets/img/Freemoviemania logo.png" alt="FreeMovieMania">
+    <img id="mainLogo" src="../assets/img/Freemoviemania logo.png" alt="FreeMovieMania">
    </a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -112,40 +112,56 @@
 
 </div><!-- container //  -->
 
-<!-- ============ Banner Section =========== -->
-<section class="container-fluid p-0">
-  <div id="carouselExampleFade" class="carousel slide carousel-slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="./assets/img/philly-movies-hero-banner (1).jpg" class="d-block w-100" alt="...">
-      </div>
+<!-- Movie Review Section  -->
+<section class="moieReviewSec container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="../assets/img/12th Fail.jpg" alt="">
+        </div>
+        <div class="col-md-6">
+            <div class="movieTitle">
+                <h1 class="titleOfMovie"> Movie Name :<span>12th Fail</span> </h1>
+            </div>
+            <div class="ratingSec">
+                <p>IMDb Rating : 9.2/10</p>
+                <p>
+                    <ul>
+                        <li><i class="fas fa-star" style="color: #de1212;"></i></li>
+                        <li><i class="fas fa-star" style="color: #de1212;"></i></li>
+                        <li><i class="fas fa-star" style="color: #de1212;"></i></li>
+                        <li><i class="fas fa-star" style="color: #de1212;"></i></li>
+                        <li><i class="fas fa-star-half" style="color: #de1212;"></i></li>
+                    </ul>
+                </p>
+
+            </div>
+            <div class="movieDescriptionSec">
+                <p>The real-life story of IPS Officer Manoj Kumar Sharma and IRS Officer Shraddha Joshi.</p>
+                <ul>
+                    <li><span class="bold">Director :</span> Vidhu Vinod Chopra</li>
+                    <li><span class="bold">Writers :</span> Vidhu Vinod ChopraJaskunwar KohliAnurag Pathak</li>
+                    <li><span class="bold">Stars :</span> Vikrant MasseyMedha ShankarJoshi Anantvijay</li>
+                </ul>
+            </div>
+            <div class="movieDownloadBtn">
+                <a href="https://drive.google.com/file/d/1adpsTXM1wbBYiATdWEKSEuI9qYcRp8Xt/view?usp=drive_link">Download Now</a>
+            </div>
+        </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 </section>
 
-
 <!-- Hollywood Movie Section  -->
-<section class="container bollywoodMovies mt-md-5 text-center">
-  <hr>
-  <h2>Bollywood Movies</h2>
-  <hr>
+<section class="container relatedMovies mt-md-5 text-center">
+  <h2>Related Movies</h2>
   <br>
   <div class="owl-carousel owl-theme">
     <div class="item">
       <div class="card" style="width: 18rem;">
-        <img src="./assets/img/12th Fail.jpg" class="card-img-top" alt="...">
+        <img src="../assets/img/12th Fail.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">12th Fail</h5>
           <p class="card-text">IMDb  Rating: 9.2/10</p>
-          <a href="./pages/12thFailPage.html" class="btn btn-primary">Download Page</a>
+          <a href="#" class="btn btn-primary">Download Page</a>
         </div>
       </div>
     </div>
@@ -153,19 +169,11 @@
 </section>
 
 
-<!-- Bollywood Movie Section  -->
-<section class="container HollywoodMovies text-center">
-  <hr>
-  <h2>Hollywood Movies</h2>
-  <hr>
-  <br>
-</section>
-
-
 <!-- Script Links  -->
-<script src="./assets/js/jquery.min.js"></script>
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/navbar.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/c6ea5fb162.js"></script>
+<script src="../assets/js/owl.carousel.min.js"></script>
+<script src="../assets/js/navbar.js"></script>
 
 <script>
 $('.owl-carousel').owlCarousel({

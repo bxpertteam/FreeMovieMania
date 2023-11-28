@@ -38,3 +38,34 @@ h1, h2, h3 {
 .card {
     width: 200px !important;
 }
+
+/* Single Viewing Page  */
+.ratingSec ul{
+    display: flex;
+    padding: 0;
+}
+.ratingSec li{
+    display: inline-block;
+    align-content: center;
+}
+.ratingSec li i{
+    font-size: 30px;
+}
+.bold{
+    font-weight: bold;
+}
+.movieDownloadBtn a {
+    background: crimson;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.9s;
+    border: 1px solid white;
+}
+.movieDownloadBtn a:hover{
+    background: white;
+    color: crimson;
+    border: 1px solid crimson;
+}
